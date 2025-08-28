@@ -4,7 +4,8 @@
 			"MathXplore",
 			"Salvare",
 			"Shirayuki",
-			"Waki285"
+			"Waki285",
+			"バズーカルパン"
 		]
 	},
 	"action-handle-custom-domain-requests": "SSL証明書申請の処理",
@@ -87,8 +88,8 @@
 	"log-action-filter-requestcustomdomain-request": "新しいリクエストの送信",
 	"log-action-filter-requestcustomdomain-statusupdate": "リクエストの更新",
 	"logentry-requestcustomdomain-request": "$1 が $5 で $4 のSSL証明書を{{GENDER:$2|リクエストしました}}",
-	"logentry-requestcustomdomain-statusupdate": "$1 がSSL証明書リクエスト $4 のステータスを$5に{{GENDER:$2|更新しました}}",
-	"requestcustomdomain": "SSLをリクエスト",
+	"logentry-requestcustomdomain-statusupdate": "$1 が取り込み申請リクエスト $4 のステータスを$5に{{GENDER:$2|更新しました}}",
+	"requestcustomdomain": "あなたのウィキにカスタムドメインを使用する申請をする",
 	"requestcustomdomainqueue": "SSL証明書リクエストキュー",
 	"right-handle-custom-domain-requests": "利用者のSSL証明書の申請を処理",
 	"right-request-custom-domain": "SSL 証明書をリクエスト"
