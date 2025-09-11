@@ -4,7 +4,6 @@ namespace Miraheze\RequestCustomDomain\Specials;
 
 use MediaWiki\Exception\ErrorPageError;
 use MediaWiki\Exception\UserBlockedError;
-use MediaWiki\Exception\UserNotLoggedIn;
 use MediaWiki\Extension\Notifications\Model\Event;
 use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\Html\Html;
@@ -37,24 +36,16 @@ class SpecialRequestCustomDomain extends FormSpecialPage {
 
 	/**
 	 * @param string $par
+	 * @throws ErrorPageError
 	 */
 	public function execute( $par ) {
+		$this->requireLogin( 'requestcustomdomain-notloggedin' );
 		$this->setParameter( $par );
 		$this->setHeaders();
 
 		$dbr = $this->connectionProvider->getReplicaDatabase( 'virtual-requestcustomdomain' );
 		if ( !WikiMap::isCurrentWikiDbDomain( $dbr->getDomainID() ) ) {
 			throw new ErrorPageError( 'requestcustomdomain-notcentral', 'requestcustomdomain-notcentral-text' );
-		}
-
-		if ( !$this->getUser()->isRegistered() ) {
-			$loginURL = SpecialPage::getTitleFor( 'UserLogin' )
-				->getFullURL( [
-					'returnto' => $this->getPageTitle()->getPrefixedText(),
-				]
-			);
-
-			throw new UserNotLoggedIn( 'requestcustomdomain-notloggedin', 'exception-nologin', [ $loginURL ] );
 		}
 
 		$this->checkPermissions();
@@ -317,7 +308,8 @@ class SpecialRequestCustomDomain extends FormSpecialPage {
 		return true;
 	}
 
-	public function checkPermissions() {
+	/** @throws UserBlockedError */
+	public function checkPermissions(): void {
 		parent::checkPermissions();
 
 		$block = $this->getUser()->getBlock();

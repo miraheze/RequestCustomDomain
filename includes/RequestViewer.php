@@ -336,14 +336,11 @@ class RequestViewer {
 		return $htmlForm;
 	}
 
-	/**
-	 * @param array $formData
-	 * @param HTMLForm $form
-	 */
+	/** @throws UserNotLoggedIn */
 	protected function submitForm(
 		array $formData,
 		HTMLForm $form,
-	) {
+	): void {
 		$user = $form->getUser();
 		if ( !$user->isRegistered() ) {
 			throw new UserNotLoggedIn( 'exception-nologin-text', 'exception-nologin' );

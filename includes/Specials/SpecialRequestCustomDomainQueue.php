@@ -26,6 +26,7 @@ class SpecialRequestCustomDomainQueue extends SpecialPage {
 
 	/**
 	 * @param string $par
+	 * @throws ErrorPageError
 	 */
 	public function execute( $par ) {
 		$this->setHeaders();
