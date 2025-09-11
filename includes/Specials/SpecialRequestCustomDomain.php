@@ -2,10 +2,13 @@
 
 namespace Miraheze\RequestCustomDomain\Specials;
 
-use ErrorPageError;
-use ManualLogEntry;
+use MediaWiki\Exception\ErrorPageError;
+use MediaWiki\Exception\UserBlockedError;
+use MediaWiki\Exception\UserNotLoggedIn;
 use MediaWiki\Extension\Notifications\Model\Event;
+use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\Html\Html;
+use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Message\Message;
 use MediaWiki\Registration\ExtensionRegistry;
@@ -16,9 +19,6 @@ use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\WikiMap\WikiMap;
 use Miraheze\RequestCustomDomain\RequestManager;
-use RepoGroup;
-use UserBlockedError;
-use UserNotLoggedIn;
 use Wikimedia\Mime\MimeAnalyzer;
 use Wikimedia\Rdbms\IConnectionProvider;
 use Wikimedia\Rdbms\Platform\ISQLPlatform;

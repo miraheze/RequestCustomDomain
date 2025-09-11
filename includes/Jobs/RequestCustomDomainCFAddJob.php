@@ -3,10 +3,10 @@
 namespace Miraheze\RequestCustomDomain\Jobs;
 
 use Exception;
-use Job;
 use MediaWiki\Config\Config;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Http\HttpRequestFactory;
+use MediaWiki\JobQueue\Job;
 use MediaWiki\MainConfigNames;
 use MediaWiki\User\User;
 use MessageLocalizer;

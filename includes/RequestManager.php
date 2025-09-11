@@ -2,11 +2,12 @@
 
 namespace Miraheze\RequestCustomDomain;
 
-use JobSpecification;
-use ManualLogEntry;
 use MediaWiki\Extension\Notifications\Model\Event;
+use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\JobQueue\JobQueueGroupFactory;
+use MediaWiki\JobQueue\JobSpecification;
 use MediaWiki\Linker\LinkRenderer;
+use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\Message\Message;
 use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\SpecialPage\SpecialPage;
@@ -17,7 +18,6 @@ use MediaWiki\User\UserGroupManagerFactory;
 use MessageLocalizer;
 use Miraheze\ManageWiki\Helpers\Factories\ModuleFactory;
 use Miraheze\RequestCustomDomain\Jobs\RequestCustomDomainCFAddJob;
-use RepoGroup;
 use stdClass;
 use Wikimedia\Rdbms\IConnectionProvider;
 use Wikimedia\Rdbms\IDatabase;
