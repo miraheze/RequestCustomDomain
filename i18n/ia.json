@@ -68,7 +68,7 @@
 	"requestcustomdomain-notification-header-new-request": "Nove requesta de dominio personalisate №$1",
 	"requestcustomdomain-notification-header-status-update": "Stato actualisate pro le requesta de dominio personalisate №$1",
 	"requestcustomdomain-notification-visit-request": "Visitar requesta",
-	"requestcustomdomain-notloggedin": "Es necessari <span class=\"plainlinks\">[$1 aperir session]</span> ante de poter requestar un certificato SSL.",
+	"requestcustomdomain-notloggedin": "Es necessari <span class=\"plainlinks\">[$1 aperir session]</span> ante de poter requestar un configuration de dominio personalisate.",
 	"requestcustomdomain-request-edited": "Requesta modificate per $1.\n\n[Cambiamentos apportate]\n\n$2",
 	"requestcustomdomain-request-edited-reason": "Motivo:\nPrevie valor: $1\nNove valor: $2",
 	"requestcustomdomain-request-edited-source": "Origine:\nPrevie valor: $1\nNove valor: $2",
