@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bartomelow"
+		]
+	},
+	"requestcustomdomain-label-add-comment": "Adicionar Comentário",
+	"requestcustomdomain-label-all": "Tudo",
+	"requestcustomdomain-label-comment": "Comentário:",
+	"requestcustomdomain-label-complete": "Completo",
+	"requestcustomdomain-label-customdomain": "URL do domínio personalizado:",
+	"requestcustomdomain-label-declined": "Rejeitado",
+	"requestcustomdomain-label-edit-request": "Editar Solicitação",
+	"requestcustomdomain-label-inprogress": "Em progresso",
+	"requestcustomdomain-label-lock": "Fechar esta solicitação para que não seja editada ou para que não sejam adicionados comentários?",
+	"requestcustomdomain-label-pending": "Pendente",
+	"requestcustomdomain-label-requested-date": "Data Solicitada:",
+	"requestcustomdomain-label-requester": "Autor do pedido:",
+	"requestcustomdomain-label-status": "Status:",
+	"requestcustomdomain-label-status-updated-comment": "Comentário adicional opcional a ser adicionado a esta solicitação:",
+	"requestcustomdomain-label-update-status": "Defina o status desta solicitação como:",
+	"requestcustomdomain-no-changes": "Nenhuma alteração foi feita.",
+	"requestcustomdomain-notcentral": "Desativado",
+	"requestcustomdomain-notification-visit-request": "Visitar pedido",
+	"requestcustomdomain-section-details": "Detalhes da solicitação",
+	"requestcustomdomain-section-editing": "Editar Solicitação",
+	"requestcustomdomain-status-updated": "Solicite $1",
+	"requestcustomdomain-usergroups-none": "nenhum",
+	"log-action-filter-requestcustomdomain": "Tipo de ação:",
+	"log-action-filter-requestcustomdomain-request": "Novas solicitações enviadas",
+	"log-action-filter-requestcustomdomain-statusupdate": "Status atualizado para solicitações"
+}
