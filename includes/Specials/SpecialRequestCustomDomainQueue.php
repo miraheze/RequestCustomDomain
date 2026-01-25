@@ -4,6 +4,7 @@ namespace Miraheze\RequestCustomDomain\Specials;
 
 use MediaWiki\Exception\ErrorPageError;
 use MediaWiki\HTMLForm\HTMLForm;
+use MediaWiki\Parser\ParserOptions;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\UserFactory;
@@ -102,7 +103,8 @@ class SpecialRequestCustomDomainQueue extends SpecialPage {
 		);
 
 		$table = $pager->getFullOutput();
-		$this->getOutput()->addParserOutputContent( $table );
+		$parserOptions = ParserOptions::newFromContext( $this->getContext() );
+		$this->getOutput()->addParserOutputContent( $table, $parserOptions );
 	}
 
 	/**
