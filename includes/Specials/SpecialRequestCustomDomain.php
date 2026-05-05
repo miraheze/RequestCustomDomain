@@ -29,9 +29,13 @@ class SpecialRequestCustomDomain extends FormSpecialPage {
 		private readonly MimeAnalyzer $mimeAnalyzer,
 		private readonly RepoGroup $repoGroup,
 		private readonly RequestManager $requestManager,
-		private readonly UserFactory $userFactory
+		private readonly UserFactory $userFactory,
 	) {
-		parent::__construct( 'RequestCustomDomain', 'request-custom-domain' );
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			parent::__construct( 'RequestCustomDomain' );
+		} else {
+			parent::__construct( 'RequestCustomDomain', 'request-custom-domain' );
+		}
 	}
 
 	/**
@@ -330,5 +334,10 @@ class SpecialRequestCustomDomain extends FormSpecialPage {
 	 */
 	protected function getGroupName() {
 		return 'other';
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'request-custom-domain';
 	}
 }
