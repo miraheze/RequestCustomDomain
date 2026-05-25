@@ -50,7 +50,7 @@
 	"requestcustomdomain-label-edit-request": "편집 요청",
 	"requestcustomdomain-label-inprogress": "진행 중",
 	"requestcustomdomain-label-lock": "이 요청을 편집하거나 의견을 달 수 없도록 잠그시겠습니까?",
-	"requestcustomdomain-label-pending": "보류 중",
+	"requestcustomdomain-label-pending": "대기 중",
 	"requestcustomdomain-label-reason": "추가 의견:",
 	"requestcustomdomain-label-requested-date": "요청일:",
 	"requestcustomdomain-label-requester": "요청자:",
