@@ -64,7 +64,7 @@
 	"requestcustomdomain-no-changes": "Değişiklik yapılmadı.",
 	"requestcustomdomain-notcentral": "Devre dışı",
 	"requestcustomdomain-notcentral-text": "Özel alan adı istekleri bu vikide kullanılamaz. Lütfen merkezi vikide özel alan adı yapılandırması isteyin.",
-	"requestcustomdomain-notification-body-new-request": "Yeni bir özel alan adı isteği alındı.<br />Verilen neden: $1<br />İstekte bulunan: $2<br />Hedef Veritabanı Adı: $3",
+	"requestcustomdomain-notification-body-new-request": "Yeni bir özel alan adı isteği alındı.<br />Verilen neden: $1<br />İstekte bulunan: $2<br />Hedef Veritabanı Adı: $3<br />Özel alan adı URL'si: $4",
 	"requestcustomdomain-notification-header-comment": "Özel alan adı isteği #$1 bir yorum aldı.",
 	"requestcustomdomain-notification-header-new-request": "Yeni özel alan adı isteği #$1",
 	"requestcustomdomain-notification-header-status-update": "Özel alan adı isteği #$1 için durum güncellendi",

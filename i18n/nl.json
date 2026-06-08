@@ -3,7 +3,8 @@
 		"authors": [
 			"McDutchie",
 			"Mitsjol",
-			"Romaine"
+			"Romaine",
+			"Siebrand"
 		]
 	},
 	"action-handle-custom-domain-requests": "aanvragen eigen domein af te handelen",
@@ -99,7 +100,7 @@
 	"log-action-filter-requestcustomdomain-request": "Nieuwe aanvragen ingediend",
 	"log-action-filter-requestcustomdomain-statusupdate": "Status bijgewerkt voor aanvragen",
 	"logentry-requestcustomdomain-request": "$1 {{GENDER:$2|heeft}} een eigen domein aangevraagd voor $4 in $5.",
-	"logentry-requestcustomdomain-statusupdate": "$1 {{GENDER:$2|heeft}} de status van de aanvraag eigen domein $4 veranderd in ‘$5’.",
+	"logentry-requestcustomdomain-statusupdate": "$1 {{GENDER:$2|heeft}} de status van de aanvraag eigen domein $4 gewijzigd in ‘$5’.",
 	"requestcustomdomain": "Vraag om een eigen domein voor uw wiki te gebruiken",
 	"requestcustomdomainqueue": "Wachtrij aanvragen eigen domein",
 	"right-handle-custom-domain-requests": "Aanvragen eigen domein afhandelen",
