@@ -49,7 +49,7 @@
 	"requestcustomdomain-label-cloudflare-handle": "Automatisch verwerken via Cloudflare",
 	"requestcustomdomain-label-comment": "Opmerking:",
 	"requestcustomdomain-label-complete": "Voltooid",
-	"requestcustomdomain-label-customdomain": "URL eigen domein:",
+	"requestcustomdomain-label-customdomain": "Domein-url:",
 	"requestcustomdomain-label-declined": "Afgewezen",
 	"requestcustomdomain-label-edit-request": "De aanvraag wijzigen",
 	"requestcustomdomain-label-inprogress": "In behandeling",
