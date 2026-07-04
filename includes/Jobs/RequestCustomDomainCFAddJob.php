@@ -7,9 +7,9 @@ use MediaWiki\Config\Config;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Http\HttpRequestFactory;
 use MediaWiki\JobQueue\Job;
+use MediaWiki\Language\MessageLocalizer;
 use MediaWiki\MainConfigNames;
 use MediaWiki\User\User;
-use MediaWiki\Language\MessageLocalizer;
 use Miraheze\RequestCustomDomain\RequestManager;
 use Psr\Log\LoggerInterface;
 
