@@ -15,7 +15,7 @@ use MediaWiki\User\ActorStoreFactory;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserGroupManagerFactory;
-use MessageLocalizer;
+use MediaWiki\Language\MessageLocalizer;
 use Miraheze\ManageWiki\Helpers\Factories\ModuleFactory;
 use Miraheze\RequestCustomDomain\Jobs\RequestCustomDomainCFAddJob;
 use stdClass;
