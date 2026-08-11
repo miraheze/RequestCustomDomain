@@ -75,6 +75,14 @@
 			]
 		}
 	},
+	"LogParamsAllowedClasses": {
+		"requestcustomdomain/request": [
+			"Wikimedia\\Message\\ScalarParam"
+		],
+		"requestcustomdomain/statusupdate": [
+			"Wikimedia\\Message\\ScalarParam"
+		]
+	},
 	"SpecialPages": {
 		"RequestCustomDomain": {
 			"class": "Miraheze\\RequestCustomDomain\\Specials\\SpecialRequestCustomDomain",
