@@ -66,7 +66,8 @@ class SpecialRequestCustomDomainQueue extends SpecialPage {
 				'type' => 'user',
 				'name' => 'requester',
 				'label-message' => 'requestcustomdomain-label-requester',
-				'exist' => true,
+				'exists' => true,
+				'excludetemp' => true,
 				'default' => $requester,
 			],
 			'status' => [
