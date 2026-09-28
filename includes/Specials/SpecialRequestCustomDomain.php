@@ -31,11 +31,7 @@ class SpecialRequestCustomDomain extends FormSpecialPage {
 		private readonly RequestManager $requestManager,
 		private readonly UserFactory $userFactory,
 	) {
-		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
-			parent::__construct( 'RequestCustomDomain' );
-		} else {
-			parent::__construct( 'RequestCustomDomain', 'request-custom-domain' );
-		}
+		parent::__construct( 'RequestCustomDomain' );
 	}
 
 	/**
