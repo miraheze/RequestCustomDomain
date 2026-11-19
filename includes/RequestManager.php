@@ -7,9 +7,7 @@ use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\JobQueue\JobQueueGroupFactory;
 use MediaWiki\JobQueue\JobSpecification;
 use MediaWiki\Language\MessageLocalizer;
-use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Logging\ManualLogEntry;
-use MediaWiki\Message\Message;
 use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\ActorStoreFactory;
@@ -39,7 +37,6 @@ class RequestManager {
 		private readonly ActorStoreFactory $actorStoreFactory,
 		private readonly IConnectionProvider $connectionProvider,
 		private readonly JobQueueGroupFactory $jobQueueGroupFactory,
-		private readonly LinkRenderer $linkRenderer,
 		private readonly RepoGroup $repoGroup,
 		private readonly MessageLocalizer $messageLocalizer,
 		private readonly UserFactory $userFactory,
@@ -98,7 +95,6 @@ class RequestManager {
 	 */
 	public function logStatusUpdate( string $comment, string $newStatus, User $user ) {
 		$requestQueueLink = SpecialPage::getTitleValueFor( 'RequestCustomDomainQueue', (string)$this->ID );
-		$requestLink = $this->linkRenderer->makeLink( $requestQueueLink, "#{$this->ID}" );
 
 		$logEntry = new ManualLogEntry( 'requestcustomdomain', 'statusupdate' );
 		$logEntry->setPerformer( $user );
@@ -110,10 +106,8 @@ class RequestManager {
 
 		$logEntry->setParameters(
 			[
-				'4::requestLink' => Message::rawParam( $requestLink ),
-				'5::requestStatus' => mb_strtolower( $this->messageLocalizer->msg(
-					"requestcustomdomain-label-$newStatus"
-				)->inContentLanguage()->text() ),
+				'4:request-link:requestID' => $this->ID,
+				'5:request-status:requestStatus' => $newStatus,
 			]
 		);
 

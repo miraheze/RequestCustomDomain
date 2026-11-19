@@ -2,9 +2,11 @@
 
 namespace Miraheze\RequestCustomDomain\Tests;
 
+use MediaWiki\Logging\LogEntryBase;
 use MediaWiki\MainConfigNames;
 use MediaWikiIntegrationTestCase;
 use Miraheze\RequestCustomDomain\RequestManager;
+use stdClass;
 use Wikimedia\Timestamp\ConvertibleTimestamp;
 
 /**
@@ -72,5 +74,32 @@ class RequestManagerTest extends MediaWikiIntegrationTestCase {
 
 		$manager = $this->getRequestManager( id: 2 );
 		$this->assertFalse( $manager->exists() );
+	}
+
+	/**
+	 * @covers ::logStatusUpdate
+	 */
+	public function testLogStoresRequestDataInsteadOfRenderedText(): void {
+		$manager = $this->getRequestManager( id: 1 );
+		$manager->logStatusUpdate( 'Done', 'complete', $this->getTestUser()->getUser() );
+
+		$rows = $this->getDb()->newSelectQueryBuilder()
+			->select( [ 'log_action', 'log_params' ] )
+			->from( 'logging' )
+			->where( [ 'log_type' => 'requestcustomdomain' ] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
+
+		$params = [];
+		foreach ( $rows as $row ) {
+			'@phan-var stdClass $row';
+			// @phan-suppress-next-line SecurityCheck-PHPSerializeInjection Classes are not allowed
+			$params[$row->log_action] = LogEntryBase::extractParams( $row->log_params );
+		}
+
+		$this->assertSame( [
+			'4:request-link:requestID' => 1,
+			'5:request-status:requestStatus' => 'complete',
+		], $params['statusupdate'] );
 	}
 }

@@ -171,7 +171,7 @@ class SpecialRequestCustomDomain extends FormSpecialPage {
 		$logEntry->setParameters(
 			[
 				'4::requestTarget' => $targetDatabaseName,
-				'5::requestLink' => Message::rawParam( $requestLink ),
+				'5:request-link:requestID' => (int)$requestID,
 			]
 		);
 

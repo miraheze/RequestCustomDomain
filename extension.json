@@ -24,7 +24,8 @@
 		"RequestCustomDomainAliases": "RequestCustomDomainAliases.php"
 	},
 	"AutoloadNamespaces": {
-		"Miraheze\\RequestCustomDomain\\": "includes/"
+		"Miraheze\\RequestCustomDomain\\": "includes/",
+		"Miraheze\\RequestCustomDomain\\Maintenance\\": "maintenance/"
 	},
 	"TestAutoloadNamespaces": {
 		"Miraheze\\RequestCustomDomain\\Tests\\": "tests/phpunit/"
@@ -51,7 +52,7 @@
 		}
 	},
 	"LogActionsHandlers": {
-		"requestcustomdomain/*": "MediaWiki\\Logging\\LogFormatter"
+		"requestcustomdomain/*": "Miraheze\\RequestCustomDomain\\Logging\\RequestCustomDomainLogFormatter"
 	},
 	"LogHeaders": {
 		"requestcustomdomain": "requestcustomdomain-log-header"
