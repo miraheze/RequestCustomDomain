@@ -4,6 +4,9 @@
 			"Bartomelow"
 		]
 	},
+	"log-action-filter-requestcustomdomain": "Tipo de ação:",
+	"log-action-filter-requestcustomdomain-request": "Novas solicitações enviadas",
+	"log-action-filter-requestcustomdomain-statusupdate": "Status atualizado para solicitações",
 	"requestcustomdomain-label-add-comment": "Adicionar Comentário",
 	"requestcustomdomain-label-all": "Tudo",
 	"requestcustomdomain-label-comment": "Comentário:",
@@ -26,9 +29,6 @@
 	"requestcustomdomain-section-editing": "Editar Solicitação",
 	"requestcustomdomain-status-updated": "Solicite $1",
 	"requestcustomdomain-usergroups-none": "nenhum",
-	"log-action-filter-requestcustomdomain": "Tipo de ação:",
-	"log-action-filter-requestcustomdomain-request": "Novas solicitações enviadas",
-	"log-action-filter-requestcustomdomain-statusupdate": "Status atualizado para solicitações",
 	"requestcustomdomainqueue": "Fila de solicitações de domínios personalizados",
 	"right-handle-custom-domain-requests": "Lidar com pedidos de domínios personalizados"
 }

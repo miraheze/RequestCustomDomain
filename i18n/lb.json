@@ -6,6 +6,9 @@
 		]
 	},
 	"action-request-custom-domain": "SSL-Certificaten unzefroen",
+	"log-action-filter-requestcustomdomain": "Aktiounstyp:",
+	"log-action-filter-requestcustomdomain-request": "Nei Ufroen ofgeschéckt",
+	"log-action-filter-requestcustomdomain-statusupdate": "Status fir Ufroen aktualiséiert",
 	"requestcustomdomain-comment-given": "Kommentar vum $1:",
 	"requestcustomdomain-customdomain-not-a-url": "Dir hutt keng gülteg URL aginn.",
 	"requestcustomdomain-label-add-comment": "Kommentar derbäisetzen",
@@ -26,8 +29,5 @@
 	"requestcustomdomain-table-status": "Status",
 	"requestcustomdomain-table-target": "Zil",
 	"requestcustomdomain-unknown": "Onbekannt Ufro.",
-	"requestcustomdomain-usergroups-none": "keng",
-	"log-action-filter-requestcustomdomain": "Aktiounstyp:",
-	"log-action-filter-requestcustomdomain-request": "Nei Ufroen ofgeschéckt",
-	"log-action-filter-requestcustomdomain-statusupdate": "Status fir Ufroen aktualiséiert"
+	"requestcustomdomain-usergroups-none": "keng"
 }
