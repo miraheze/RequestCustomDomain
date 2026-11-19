@@ -24,7 +24,6 @@ return [
 			$services->getActorStoreFactory(),
 			$services->getConnectionProvider(),
 			$services->getJobQueueGroupFactory(),
-			$services->getLinkRenderer(),
 			$services->getRepoGroup(),
 			RequestContext::getMain(),
 			$services->getUserFactory(),
